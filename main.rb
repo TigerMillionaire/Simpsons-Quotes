@@ -1,8 +1,8 @@
 require './episode_text'
 require 'sinatra'
+require 'levenshtein'
 
-
-episodes = Marshal.load(File.open('/home/lizzy/play/Simpsons-Quotes/episode_dump.dmp', "r").read)
+episodes = Marshal.load(File.open("#{File.expand_path(".")}/episode_dump.dmp", "r").read)
 
 
 
